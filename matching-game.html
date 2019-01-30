@@ -1,0 +1,109 @@
+<html>
+
+    <head>
+        <title>JavaScript Matching Game</title>
+        <link rel="shortcut icon" type="image/x-icon" href="images/title-image.png">
+        <link rel="stylesheet" type="text/css" href="styles/matching-game.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="scripts/matching-game.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+   
+    <body>
+       
+        <p id = "matches-num">Matches: 0</p>
+        <p id = "misses">Misses: 0</p>
+        
+    <!-- Images that appear when box is flipped -->
+    <div id = "main">
+        <div id = "game-board-photos">
+            <img src = "images/dog-photo.jpg" id = "dogPhoto1" alt = "Dog Photo">
+            <img src = "images/cat-photo.jpg" id = "catPhoto2" alt = "Cat Photo">
+            <img src = "images/car-photo.jpg" id = "carPhoto3" alt = "Car Photo">
+            <img src = "images/nature-photo.jpg" id = "naturePhoto4" alt = "Nature Photo">
+            <img src = "images/laptop-photo.jpg" id = "laptopPhoto5" alt = "Laptop Photo">
+            <img src = "images/book-photo.jpg" id = "bookPhoto6" alt = "Book Photo">
+            <img src = "images/wave-photo.jpg" id = "wavePhoto7" alt = "Wave Photo">
+            <img src = "images/nature-photo.jpg" id = "naturePhoto8" alt = "Nature Photo">
+            <img src = "images/dog-photo.jpg" id = "dogPhoto9" alt = "Dog Photo">
+            <img src = "images/table-photo.jpg" id = "tablePhoto10" alt = "Table Photo">
+            <img src = "images/lightbulb-photo.jpg" id = "lightbulbPhoto11" alt = "Lightbulb Photo">
+            <img src = "images/lightbulb-photo.jpg" id = "lightbulbPhoto12" alt = "Lightbulb Photo">
+            <img src = "images/pizza-photo.JPEG" id = "pizzaPhoto13" alt = "Pizza Photo">
+            <img src = "images/basketball-photo.jpg" id = "basketballPhoto14" alt = "Basketball Photo">
+            <img src = "images/laptop-photo.jpg" id = "laptopPhoto15" alt = "Laptop Photo">
+            <img src = "images/cat-photo.jpg" id = "catPhoto16" alt = "Cat Photo">
+            <img src = "images/table-photo.jpg" id = "tablePhoto17" alt = "Table Photo">
+            <img src = "images/wave-photo.jpg" id = "wavePhoto18" alt = "Wave Photo">
+            <img src = "images/bonus-photo.jpg" id = "bonusCard19" alt = "Bonus Card">
+            <img src = "images/skate-photo.png" id = "skatePhoto20" alt = "Hockey Skate Photo">
+            <img src = "images/basketball-photo.jpg" id = "basketballPhoto21" alt = "Basketball Photo">
+            <img src = "images/book-photo.jpg" id = "bookPhoto22" alt = "Book Photo">
+            <img src = "images/pizza-photo.JPEG" id = "pizzaPhoto23" alt = "Pizza Photo">
+            <img src = "images/skate-photo.png" id = "skatePhoto24" alt = "Hockey Skate Photo">
+            <img src = "images/car-photo.jpg" id = "carPhoto25" alt = "Car Photo">
+        </div>
+
+        <!-- Question Mark Boxes -->
+        <div id = "game-board">
+            <img src = "images/question-mark.png" id = "card1" alt = "Matching Card" class = "0">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "1">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "2">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "3">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "4">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "5">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "6">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "7">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "8">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "9">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "10">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "11">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "12">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "13">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "14">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "15">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "16">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "17">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "18">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "19">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "20">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "21">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "22">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "23">
+            <img src = "images/question-mark.png" alt = "Matching Card" class = "24">
+        </div>
+        
+        <!-- Images that appear over box when there is a matched image -->
+        <div id = "game-board-photos-matched">
+            <img src = "images/dog-photo.jpg" id = "matched1" alt = "Dog Photo">
+            <img src = "images/cat-photo.jpg" id = "matched2" alt = "Cat Photo">
+            <img src = "images/car-photo.jpg" id = "matched3" alt = "Car Photo">
+            <img src = "images/nature-photo.jpg" id = "matched4" alt = "Nature Photo">
+            <img src = "images/laptop-photo.jpg" id = "matched5" alt = "Laptop Photo">
+            <img src = "images/book-photo.jpg" id = "matched6" alt = "Book Photo">
+            <img src = "images/wave-photo.jpg" id = "matched7" alt = "Wave Photo">
+            <img src = "images/nature-photo.jpg" id = "matched8" alt = "Nature Photo">
+            <img src = "images/dog-photo.jpg" id = "matched9" alt = "Dog Photo">
+            <img src = "images/table-photo.jpg" id = "matched10" alt = "Table Photo">
+            <img src = "images/lightbulb-photo.jpg" id = "matched11" alt = "Lightbulb Photo">
+            <img src = "images/lightbulb-photo.jpg" id = "matched12" alt = "Lightbulb Photo">
+            <img src = "images/pizza-photo.JPEG" id = "matched13" alt = "Pizza Photo">
+            <img src = "images/basketball-photo.jpg" id = "matched14" alt = "Basketball Photo">
+            <img src = "images/laptop-photo.jpg" id = "matched15" alt = "Laptop Photo">
+            <img src = "images/cat-photo.jpg" id = "matched16" alt = "Cat Photo">
+            <img src = "images/table-photo.jpg" id = "matched17" alt = "Table Photo">
+            <img src = "images/wave-photo.jpg" id = "matched18" alt = "Wave Photo">
+            <img src = "images/bonus-photo.jpg" id = "matched19" alt = "Bonus Card">
+            <img src = "images/skate-photo.png" id = "matched20" alt = "Hockey Skate Photo">
+            <img src = "images/basketball-photo.jpg" id = "matched21" alt = "Basketball Photo">
+            <img src = "images/book-photo.jpg" id = "matched22" alt = "Book Photo">
+            <img src = "images/pizza-photo.JPEG" id = "matched23" alt = "Pizza Photo">
+            <img src = "images/skate-photo.png" id = "matched24" alt = "Hockey Skate Photo">
+            <img src = "images/car-photo.jpg" id = "matched25" alt = "Car Photo">
+        </div>
+    </div>
+        
+    </body>
+
+</html>
